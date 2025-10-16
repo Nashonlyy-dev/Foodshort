@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://foodshort-1.onrender.com',
     credentials: true,
 }));
 app.use(express.json());
@@ -24,5 +24,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/food', foodRoutes);
 app.use('/api/feed', feedRoutes);
 app.use('/api/order', placeOrderRoutes);
+
 
 module.exports = app
