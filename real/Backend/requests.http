@@ -1,0 +1,104 @@
+### Root test
+GET http://localhost:3000/
+
+##########################
+# USER ROUTES
+##########################
+
+### Register a User
+POST http://localhost:3000/api/auth/user/register
+Content-Type: application/json
+
+{
+  "fullName": "Nash User",
+  "email": "user@test.com",
+  "passward": "123456"
+}
+
+### Login a User
+POST http://localhost:3000/api/auth/user/login
+Content-Type: application/json
+
+{
+  "email": "user@test.com",
+  "passward": "123456"
+}
+
+### Logout User
+GET http://localhost:3000/api/auth/user/logout
+
+
+##########################
+# PARTNER ROUTES
+##########################
+
+### Register a Partner
+POST http://localhost:3000/api/auth/partner/register
+Content-Type: application/json
+
+{
+  "name": "Nash Partner",
+  "email": "partner@test.com",
+  "password": "partner123"
+}
+
+### Login a Partner
+POST http://localhost:3000/api/auth/partner/login
+Content-Type: application/json
+
+{
+  "email": "partner@test.com",
+  "password": "partner123"
+}
+
+### Logout Partner
+GET http://localhost:3000/api/auth/partner/logout
+
+
+### Create Food Item with video upload
+POST http://localhost:3000/api/food/
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="name"
+
+Pizza
+--WebAppBoundary
+Content-Disposition: form-data; name="description"
+
+Delicious cheese pizza
+--WebAppBoundary
+Content-Disposition: form-data; name="price"
+
+9.99
+--WebAppBoundary
+Content-Disposition: form-data; name="category"
+
+Italian
+--WebAppBoundary
+Content-Disposition: form-data; name="video"; filename="4747709-hd_1080_1920_25fps.mp4"
+Content-Type: video/mp4
+
+< ./Backend/src/4747709-hd_1080_1920_25fps.mp4
+--WebAppBoundary--
+
+
+### Get Food Items
+
+GET  http://localhost:3000/api/food/
+
+
+### place order
+
+POST  http://localhost:3000/api/order/place
+Content-Type: application/json
+
+{
+  "quantity": 3
+}
+
+### get order details
+
+GET  http://localhost:3000/api/order/partner/orders
+Content-Type: application/json
+
