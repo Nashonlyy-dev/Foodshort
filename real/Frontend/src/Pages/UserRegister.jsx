@@ -10,7 +10,7 @@ const UserRegister = () => {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:3000/api/auth/user/register",
+      "https://foodshort.onrender.com/api/auth/user/register",
       {
         fullName: e.target.fullName.value,
         email: e.target.email.value,
@@ -95,3 +95,4 @@ const UserRegister = () => {
 };
 
 export default UserRegister;
+
