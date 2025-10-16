@@ -10,7 +10,7 @@ const UserLogin = () => {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:3000/api/auth/user/login",
+      "https://foodshort.onrender.com/api/auth/user/login",
       {
         email: e.target.email.value,
         password: e.target.password.value,
@@ -82,3 +82,4 @@ const UserLogin = () => {
 };
 
 export default UserLogin;
+
