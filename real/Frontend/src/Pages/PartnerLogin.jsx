@@ -9,7 +9,7 @@ const PartnerLogin = () => {
     e.preventDefault();
     console.log(e.target.email.value);
     
-    await axios.post("http://localhost:3000/api/auth/partner/login", {
+    await axios.post("https://foodshort.onrender.com/api/auth/partner/login", {
       email: e.target.email.value,
       password: e.target.password.value,
     }, { withCredentials: true });
@@ -65,3 +65,4 @@ const PartnerLogin = () => {
 };
 
 export default PartnerLogin;
+
