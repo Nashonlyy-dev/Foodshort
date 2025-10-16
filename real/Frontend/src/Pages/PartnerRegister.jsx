@@ -14,7 +14,7 @@ const PartnerRegister = () => {
     console.log(e.target.businessName.value);
     
 
-   const res = await axios.post("http://localhost:3000/api/auth/partner/register",{
+   const res = await axios.post("https://foodshort.onrender.com/api/auth/partner/register",{
       name:e.target.businessName.value,
       email:e.target.email.value,
       password:e.target.password.value,
@@ -156,3 +156,4 @@ const PartnerRegister = () => {
 };
 
 export default PartnerRegister;
+
