@@ -28,7 +28,7 @@ const Home = () => {
       isFetchingRef.current = true;
       setLoadingPage(true);
       try {
-        const res = await axios.get(`http://localhost:3000/api/feed?page=${p}&limit=${LIMIT}`, {
+        const res = await axios.get(`https://foodshort.onrender.com/feed?page=${p}&limit=${LIMIT}`, {
           withCredentials: true,
           timeout: 120000,
         });
@@ -148,3 +148,4 @@ const Home = () => {
 };
 
 export default Home;
+
