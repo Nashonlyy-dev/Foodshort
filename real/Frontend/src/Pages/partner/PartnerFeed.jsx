@@ -13,7 +13,7 @@ const PartnerFeed = () => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:3000/api/order/partner/orders", {
+        const res = await axios.get("https://foodshort.onrender.com/api/order/partner/orders", {
           withCredentials: true,
         });
 
@@ -105,3 +105,4 @@ const PartnerFeed = () => {
 };
 
 export default PartnerFeed;
+
